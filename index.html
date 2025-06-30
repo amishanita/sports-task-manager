@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Task Manager | スポーツタスクマネージャー | खेल कार्य प्रबन्धक</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-running"></i>
+            </div>
+            <h1 id="app-title">スポーツタスクマネージャー</h1>
+            <p class="subtitle" id="app-subtitle">スポーツの練習と試合を管理</p>
+
+            <!-- Language selector buttons -->
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="ja">日本語</button>
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="ne">नेपाली</button>
+            </div>
+
+            <!-- Stats display -->
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-tasks">0</div>
+                    <div class="stat-label" id="total-label">総タスク</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="completed-tasks">0</div>
+                    <div class="stat-label" id="completed-label">完了</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="pending-tasks">0</div>
+                    <div class="stat-label" id="pending-label">未完了</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Add task panel -->
+            <div class="panel">
+                <h2><i class="fas fa-plus-circle"></i> <span id="add-task-title">新しいタスクを追加</span></h2>
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="task-title" id="task-title-label">タスク名 *</label>
+                        <input type="text" id="task-title" placeholder="例: サッカーの練習">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="task-sport" id="sport-label">スポーツ</label>
+                        <select id="task-sport">
+                            <option value="soccer">⚽ サッカー</option>
+                            <option value="basketball">🏀 バスケットボール</option>
+                            <option value="baseball">⚾ 野球</option>
+                            <option value="tennis">🎾 テニス</option>
+                            <option value="swimming">🏊 水泳</option>
+                            <option value="running">🏃 ランニング</option>
+                            <option value="volleyball">🏐 バレーボール</option>
+                            <option value="other">🤸 その他</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="task-due-date" id="due-date-label">日付</label>
+                        <input type="date" id="task-due-date">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="task-description" id="description-label">詳細</label>
+                    <textarea id="task-description" rows="3" placeholder="例: ドリブル練習を30分"></textarea>
+                </div>
+
+                <button id="add-task" class="add-btn">
+                    <i class="fas fa-plus"></i> <span id="add-btn-text">タスクを追加</span>
+                </button>
+            </div>
+
+            <!-- Task list panel -->
+            <div class="panel">
+                <div class="controls">
+                    <div class="input-group" style="max-width: 300px;">
+                        <label for="search-task" id="search-label">タスクを検索</label>
+                        <input type="text" id="search-task" placeholder="検索...">
+                    </div>
+
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" id="filter-all">すべて</button>
+                        <button class="filter-btn" data-filter="active" id="filter-active">未完了</button>
+                        <button class="filter-btn" data-filter="completed" id="filter-completed">完了</button>
+                    </div>
+                </div>
+
+                <div class="task-list" id="task-container">
+                    <div class="empty-state">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3 id="empty-title">タスクがありません</h3>
+                        <p id="empty-subtitle">最初のタスクを追加してください</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p id="footer-text">スポーツタスクマネージャー - 日本語, English, नेपाली対応</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
