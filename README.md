@@ -1,79 +1,123 @@
 🏃 Sports Task Manager
+スポーツタスクマネージャー
 
-A simple multi-language task manager for sports practice and matches.
-Users can create, manage, and track sports tasks with support for Japanese, English, and Nepali.
+A lightweight sports task management web application that helps users organize practice sessions, matches, and training schedules.
 
-This project demonstrates JavaScript DOM manipulation, localStorage usage, filtering, and multilingual UI design.
+スポーツの練習・試合・トレーニング予定を管理するための シンプルなタスク管理Webアプリケーションです。
+
+The application supports multiple languages (Japanese, English, Nepali) and demonstrates core frontend development techniques using Vanilla JavaScript.
+
+このアプリは 日本語・英語・ネパール語の多言語対応を実装しており、Vanilla JavaScript を使用したフロントエンド開発の基本技術を示しています。
 
 🚀 Features
+主な機能
+Task Management
 
-➕ Add sports tasks (practice, training, matches)
+タスク管理
 
-✏️ Edit existing tasks
+Add new sports tasks
+スポーツタスクの追加
 
-✅ Mark tasks as completed or reopen them
+Edit existing tasks
+タスクの編集
 
-🗑 Delete tasks
+Mark tasks as completed or reopen them
+タスクの完了 / 再開
 
-🔍 Search tasks instantly
+Delete tasks
+タスクの削除
 
-🎯 Filter tasks (All / Active / Completed)
+Organization & Productivity
 
-🌍 Multi-language support
+整理・効率化
+
+Search tasks instantly
+タスクの検索
+
+Filter tasks (All / Active / Completed)
+フィルター機能（すべて / 未完了 / 完了）
+
+Task statistics dashboard
+タスク統計の表示
+
+Internationalization
+
+多言語対応
 
 Japanese 🇯🇵
 
-English 🇬🇧
+English 🇺🇸
 
 Nepali 🇳🇵
 
-📊 Task statistics dashboard
+Dynamic language switching is implemented through a translation object in JavaScript.
 
-💾 Data saved in localStorage (no backend needed)
+JavaScriptの 翻訳オブジェクトを利用して、動的に言語を切り替える仕組みを実装しています。
 
-🛠 Tech Stack
+🛠 Technology Stack
+技術スタック
+Technology	Description
+HTML5	Application structure
+CSS3	Responsive UI design
+JavaScript (Vanilla)	Application logic
+LocalStorage API	Client-side data persistence
+Font Awesome	Icon library
 
-HTML5
+Frameworks such as React or Vue were intentionally not used in order to demonstrate core JavaScript skills.
 
-CSS3
-
-Vanilla JavaScript
-
-Font Awesome Icons
-
-LocalStorage API
-
-No frameworks used. Pure frontend project.
+React や Vue などのフレームワークは使用せず、純粋な JavaScript の理解を示すことを目的としています。
 
 📂 Project Structure
-sports-task-manager
+プロジェクト構成
+sports-task-manager/
 │
-├── index.html     # Main UI layout
-├── style.css      # Application styling
-├── script.js      # App logic
+├── index.html     # Application layout
+├── style.css      # UI styling
+├── script.js      # Application logic
 └── README.md      # Project documentation
-▶️ How to Run
+💾 Data Storage
+データ保存
 
-Download or clone the repository
+All task data is stored locally using the browser LocalStorage API.
+
+すべてのタスクデータは ブラウザの LocalStorage API を使用して保存されます。
+
+This allows the application to work without a backend server.
+
+そのため、バックエンドサーバーなしでも動作可能です。
+
+▶️ How to Run
+実行方法
+
+Clone the repository
 
 git clone https://github.com/your-username/sports-task-manager.git
 
-Open the project folder
+Navigate to the project folder
 
-Open index.html in a browser
+cd sports-task-manager
 
-That's it. No installation required.
+Open index.html in your browser
 
-💡 Learning Purpose
+ブラウザで index.html を開くだけで実行できます。
 
-This project demonstrates:
+No installation or server setup is required.
+
+追加のインストールやサーバー設定は不要です。
+
+🎯 Learning Objectives
+学習目的
+
+This project demonstrates the following frontend development concepts:
+
+このプロジェクトでは、以下のフロントエンド技術を実装しています。
 
 DOM manipulation
 
 Event handling
 
-LocalStorage data persistence
-
 Dynamic UI rendering
 
-Language translation systems
+Multi-language interface design
+
+LocalStorage data persistence
