@@ -1,123 +1,67 @@
-🏃 Sports Task Manager
-スポーツタスクマネージャー
+# Sports Task Manager | スポーツタスクマネージャー
 
-A lightweight sports task management web application that helps users organize practice sessions, matches, and training schedules.
+練習・試合・トレーニングの予定を管理する、シンプルなタスク管理 Web アプリです。日本語・英語・ネパール語を画面上で切り替えられます。
 
-スポーツの練習・試合・トレーニング予定を管理するための シンプルなタスク管理Webアプリケーションです。
+A simple web app for managing practice sessions, matches and training. The interface switches between Japanese, English and Nepali.
 
-The application supports multiple languages (Japanese, English, Nepali) and demonstrates core frontend development techniques using Vanilla JavaScript.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-このアプリは 日本語・英語・ネパール語の多言語対応を実装しており、Vanilla JavaScript を使用したフロントエンド開発の基本技術を示しています。
+---
 
-🚀 Features
-主な機能
-Task Management
+## 機能 / Features
 
-タスク管理
+| 機能 / Feature | 内容 / Details |
+|---|---|
+| ✏️ タスク管理 / Tasks | 追加、編集、完了・再開、削除 / add, edit, complete or reopen, delete |
+| 🔍 検索 / Search | キーワードですぐに絞り込み / instant search |
+| 🗂️ フィルター / Filter | すべて・未完了・完了 / all, active, completed |
+| 📊 統計 / Stats | タスクの件数と進み具合を表示 / task counts and progress |
+| 🌐 多言語 / Languages | 🇯🇵 日本語　🇬🇧 English　🇳🇵 नेपाली |
+| 💾 保存 / Storage | ブラウザの LocalStorage に保存。サーバーは不要 / saved in LocalStorage, no server needed |
 
-Add new sports tasks
-スポーツタスクの追加
+---
 
-Edit existing tasks
-タスクの編集
+## しくみ / How it works
 
-Mark tasks as completed or reopen them
-タスクの完了 / 再開
+```mermaid
+flowchart LR
+    U[利用者 / User] --> UI[画面<br/>index.html + style.css]
+    UI --> JS[script.js<br/>タスク操作・検索・言語切り替え]
+    JS --> LS[(LocalStorage<br/>データ保存)]
+    JS --> T[翻訳データ<br/>ja / en / ne]
+```
 
-Delete tasks
-タスクの削除
+言語の切り替えは、JavaScript の翻訳データから表示文言を差し替える方式です。React や Vue などのフレームワークは使わず、JavaScript の基本（DOM 操作、イベント処理）で作りました。
 
-Organization & Productivity
+Language switching swaps the on-screen text from a translation object in JavaScript. No framework is used; it is built on plain DOM manipulation and event handling.
 
-整理・効率化
+---
 
-Search tasks instantly
-タスクの検索
+## 使い方 / How to run
 
-Filter tasks (All / Active / Completed)
-フィルター機能（すべて / 未完了 / 完了）
-
-Task statistics dashboard
-タスク統計の表示
-
-Internationalization
-
-多言語対応
-
-Japanese 🇯🇵
-
-English 🇺🇸
-
-Nepali 🇳🇵
-
-Dynamic language switching is implemented through a translation object in JavaScript.
-
-JavaScriptの 翻訳オブジェクトを利用して、動的に言語を切り替える仕組みを実装しています。
-
-🛠 Technology Stack
-技術スタック
-Technology	Description
-HTML5	Application structure
-CSS3	Responsive UI design
-JavaScript (Vanilla)	Application logic
-LocalStorage API	Client-side data persistence
-Font Awesome	Icon library
-
-Frameworks such as React or Vue were intentionally not used in order to demonstrate core JavaScript skills.
-
-React や Vue などのフレームワークは使用せず、純粋な JavaScript の理解を示すことを目的としています。
-
-📂 Project Structure
-プロジェクト構成
-sports-task-manager/
-│
-├── index.html     # Application layout
-├── style.css      # UI styling
-├── script.js      # Application logic
-└── README.md      # Project documentation
-💾 Data Storage
-データ保存
-
-All task data is stored locally using the browser LocalStorage API.
-
-すべてのタスクデータは ブラウザの LocalStorage API を使用して保存されます。
-
-This allows the application to work without a backend server.
-
-そのため、バックエンドサーバーなしでも動作可能です。
-
-▶️ How to Run
-実行方法
-
-Clone the repository
-
-git clone https://github.com/your-username/sports-task-manager.git
-
-Navigate to the project folder
-
+```bash
+git clone https://github.com/amishanita/sports-task-manager.git
 cd sports-task-manager
+```
 
-Open index.html in your browser
+`index.html` をブラウザで開くだけで動きます。インストールは不要です。
 
-ブラウザで index.html を開くだけで実行できます。
+Open `index.html` in a browser. No install needed.
 
-No installation or server setup is required.
+---
 
-追加のインストールやサーバー設定は不要です。
+## フォルダ構成 / Structure
 
-🎯 Learning Objectives
-学習目的
+```
+sports-task-manager/
+├── index.html   画面の構成 / layout
+├── style.css    デザイン / styling
+├── script.js    動作 / app logic
+└── README.md
+```
 
-This project demonstrates the following frontend development concepts:
+---
 
-このプロジェクトでは、以下のフロントエンド技術を実装しています。
-
-DOM manipulation
-
-Event handling
-
-Dynamic UI rendering
-
-Multi-language interface design
-
-LocalStorage data persistence
+**Tamang Amish**　|　[GitHub](https://github.com/amishanita)　|　[LinkedIn](https://www.linkedin.com/in/tamang-amish-669289250)
